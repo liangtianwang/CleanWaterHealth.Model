@@ -11,14 +11,14 @@ namespace CleanWaterHealth.Model.Test
         [TestMethod]
         public void TestMethod1()
         {
-            var optionsBuilder = new DbContextOptionsBuilder<ItemContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<AppointmentContext>();
             optionsBuilder.UseSqlServer("Server=34.87.237.207;Database=CWH;User Id=sqlserver;Password=123456");
 
-            var context = new ItemContext(optionsBuilder.Options);
+            var context = new AppointmentContext(optionsBuilder.Options);
 
             // Create
-            context.Add(new Item { ItemCode = "2", Description = "12" });
-            context.SaveChanges();
+            //context.Add(new Item { ItemCode = "2", Description = "12" });
+            //context.SaveChanges();
 
             Assert.AreEqual(1, 1);
 
