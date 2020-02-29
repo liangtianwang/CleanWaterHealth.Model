@@ -24,4 +24,4 @@ jobs:
         nuget sources add -name "github" -Source https://nuget.pkg.github.com/liangtianwang/index.json -UserName liangtianwang -Password ${{ secrets.GITHUB_TOKEN }}
     - name : Publish to package
       run: 
-        nuget push "CleanWaterHealth.Model/bin/Release/CleanWaterHealth.Model.1.0.0.nupkg" --source "github"
+        nuget push "CleanWaterHealth.Model/bin/Release/CleanWaterHealth.Model.1.0.0.nupkg" -source "github"
