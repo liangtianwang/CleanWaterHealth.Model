@@ -17,4 +17,4 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release
     - name : Publish to package
-      run: dotnet nuget push "bin/Release/CleanWaterHealth.Model.1.0.0.nupkg" --source "github"
+      run: dotnet nuget push "bin/Release/CleanWaterHealth.Model.1.0.0.nupkg" -s https://nuget.pkg.github.com/liangtianwang/index.json
