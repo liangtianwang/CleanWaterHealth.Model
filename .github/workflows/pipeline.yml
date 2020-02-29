@@ -17,9 +17,11 @@ jobs:
     - name: Pack
       run: 
         dotnet pack --configuration Release
+    - name: Install NuGet client
+      uses: warrenbuckley/Setup-Nuget@v1
     - name: Add github package source
       run: 
-        dotnet nuget sources Add -Name "github" -Source https://nuget.pkg.github.com/liangtianwang/index.json -UserName liangtianwang -Password ${{ secrets.GITHUB_TOKEN }}
+        nuget sources add -name "github" -Source https://nuget.pkg.github.com/liangtianwang/index.json -UserName liangtianwang -Password ${{ secrets.GITHUB_TOKEN }}
     - name : Publish to package
       run: 
-        dotnet nuget push "CleanWaterHealth.Model/bin/Release/CleanWaterHealth.Model.1.0.0.nupkg" --source "github"
+        nuget push "CleanWaterHealth.Model/bin/Release/CleanWaterHealth.Model.1.0.0.nupkg" --source "github"
