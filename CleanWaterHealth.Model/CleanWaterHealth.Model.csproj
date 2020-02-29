@@ -7,7 +7,7 @@
     <Authors>Liangtian</Authors>
     <Company>Liangtian</Company>
     <PackageDescription>CleanWaterHealth.Model package</PackageDescription>
-    <RepositoryUrl>https://github.com/liangtianwang/REPOSITORY</RepositoryUrl>
+    <RepositoryUrl>https://github.com/liangtianwang/CleanWaterHealth.Model<RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
