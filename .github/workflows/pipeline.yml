@@ -15,9 +15,11 @@ jobs:
         dotnet-version: 3.1.100
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Pack
-      run: dotnet pack --configuration Release
+      run: 
+        dotnet pack --configuration Release
     - name: Add github package source
-      run: nuget sources Add -Name "github" -Source https://nuget.pkg.github.com/liangtianwang/index.json -UserName liangtianwang -Password ${{ secrets.GITHUB_TOKEN }}
+      run: 
+        dotnet nuget sources Add -Name "github" -Source https://nuget.pkg.github.com/liangtianwang/index.json -UserName liangtianwang -Password ${{ secrets.GITHUB_TOKEN }}
     - name : Publish to package
       run: 
         dotnet nuget push "CleanWaterHealth.Model/bin/Release/CleanWaterHealth.Model.1.0.0.nupkg" --source "github"
