@@ -18,4 +18,4 @@ jobs:
       run: dotnet pack --configuration Release
     - name : Publish to package
       run: 
-        dotnet nuget push "CleanWaterHealth.Model/bin/Release/CleanWaterHealth.Model.1.0.0.nupkg" -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/liangtianwang/index.json
+        dotnet nuget push "CleanWaterHealth.Model/bin/Release/CleanWaterHealth.Model.1.0.0.nupkg" -k ${{ secrets.PACKAGE_TOKEN }} -s https://nuget.pkg.github.com/liangtianwang/index.json
